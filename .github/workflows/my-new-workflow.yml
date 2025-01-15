@@ -33,6 +33,10 @@ jobs:
         - name: runner
           run: 
             echo "${{ ToJson(runner) }}"
+        
+        - name: Secrets Variable
+          run: 
+            echo "${{ secrets }}"
 
 
     
