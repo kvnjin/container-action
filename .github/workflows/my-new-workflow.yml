@@ -11,7 +11,7 @@ on:
 jobs:
     manual-jobs-dev:
       runs-on: ubuntu-latest
-      environnement: dev
+      environment: dev
 
       steps:
         - name: Exemple
@@ -41,7 +41,7 @@ jobs:
 
     manual-jobs-prod:
       runs-on: ubuntu-latest
-      environnement: prod
+      environment: prod
 
       steps:
         - name: Exemple
