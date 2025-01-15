@@ -1,0 +1,14 @@
+name: Test Manual Workflow
+
+on:
+    workflow_dispatch:
+
+jobs:
+    manual-jobs:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Exemple
+          run: echo "Mon exemple"
+
+    
