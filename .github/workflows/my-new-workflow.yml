@@ -69,24 +69,24 @@ jobs:
           run: 
             echo "${{ vars.MY_API_URL_TEST }}"
 
-expression_job:
-  runs-on: ubuntu-latest
-  name: Expressions
-  if: ${{ github.ref == 'refs/heads/main' && github.event.inputs.logLevel == 'debug'}}
+    expression_job:
+      runs-on: ubuntu-latest
+      name: Expressions
+      if: ${{ github.ref == 'refs/heads/main' && github.event.inputs.logLevel == 'debug'}}
 
-  steps:
-    -run: echo "Only run if triggered by mlain branch..."
-      if: contains(github.ref, 'main')
+      steps:
+        -run: echo "Only run if triggered by mlain branch..."
+          if: contains(github.ref, 'main')
 
-    -run: |
-      echo "Fail dependong on parameter"
-      return 1
-    if: github.event.inputs.run_matrix == 'true'  
+        -run: |
+          echo "Fail dependong on parameter"
+          return 1
+        if: github.event.inputs.run_matrix == 'true'  
 
-    -run: echo "Run Always"
-      if: always()
-    -run: echo "Run only on succes"
-      if: success()
-    -run: echo "Run only on failure"
-      if: failure() 
-    
+        -run: echo "Run Always"
+          if: always()
+        -run: echo "Run only on succes"
+          if: success()
+        -run: echo "Run only on failure"
+          if: failure() 
+        -run: echo "Run only on cancelled"  
