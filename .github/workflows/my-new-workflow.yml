@@ -11,7 +11,7 @@ on:
 jobs:
     manual-jobs-dev:
       runs-on: ubuntu-latest
-      env: /dev
+      environnement: dev
 
       steps:
         - name: Exemple
@@ -37,11 +37,11 @@ jobs:
         
         - name: Secrets Variable
           run: 
-            echo "${{ vars_MY_API_URL) }}"
+            echo "${{ vars.MY_API_URL) }}"
 
     manual-jobs-prod:
       runs-on: ubuntu-latest
-      env: /prod
+      environnement: prod
 
       steps:
         - name: Exemple
@@ -67,7 +67,7 @@ jobs:
         
         - name: Secrets Variable
           run: 
-            echo "${{ var_SECRETS }}"
+            echo "${{ vars.MY_API_URL_TEST }}"
 
 
     
