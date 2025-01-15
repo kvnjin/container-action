@@ -37,7 +37,7 @@ jobs:
         
         - name: Secrets Variable
           run: 
-            echo "${{ vars.MY_API_URL) }}"
+            echo "${{ vars.MY_API_URL }}"
 
     manual-jobs-prod:
       runs-on: ubuntu-latest
