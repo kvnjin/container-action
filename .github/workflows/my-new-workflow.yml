@@ -76,7 +76,7 @@ jobs:
 
       steps:
         -run: echo "Only run if triggered by mlain branch..."
-          if: contains(github.ref, 'main')
+        if: contains(github.ref, 'main')
 
         -run: |
           echo "Fail dependong on parameter"
